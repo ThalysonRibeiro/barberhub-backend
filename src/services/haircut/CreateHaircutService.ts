@@ -23,11 +23,11 @@ class CreateHaircutService {
         id: user_id,
       },
       include: {
-        subscripitons: true,
+        subscriptons: true,
       }
     })
 
-    if (myHaircuts >= 3 && user?.subscripitons?.status !== "active") {
+    if (myHaircuts >= 3 && user?.subscriptons?.status !== "active") {
       throw new Error("Not authorized");
     }
 
@@ -38,7 +38,6 @@ class CreateHaircutService {
         user_id: user_id,
       }
     });
-    console.log(haircut);
 
 
     return haircut;

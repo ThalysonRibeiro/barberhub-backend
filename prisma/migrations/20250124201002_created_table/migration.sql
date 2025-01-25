@@ -13,15 +13,15 @@ CREATE TABLE "users" (
 );
 
 -- CreateTable
-CREATE TABLE "subscripitons" (
+CREATE TABLE "subscriptons" (
     "id" TEXT NOT NULL,
     "status" TEXT NOT NULL,
-    "price" TEXT NOT NULL,
+    "priceId" TEXT NOT NULL,
     "created_at" TIMESTAMP(3) DEFAULT CURRENT_TIMESTAMP,
     "updated_at" TIMESTAMP(3) DEFAULT CURRENT_TIMESTAMP,
     "userId" TEXT NOT NULL,
 
-    CONSTRAINT "subscripitons_pkey" PRIMARY KEY ("id")
+    CONSTRAINT "subscriptons_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable
@@ -50,10 +50,10 @@ CREATE TABLE "services" (
 );
 
 -- CreateIndex
-CREATE UNIQUE INDEX "subscripitons_userId_key" ON "subscripitons"("userId");
+CREATE UNIQUE INDEX "subscriptons_userId_key" ON "subscriptons"("userId");
 
 -- AddForeignKey
-ALTER TABLE "subscripitons" ADD CONSTRAINT "subscripitons_userId_fkey" FOREIGN KEY ("userId") REFERENCES "users"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE "subscriptons" ADD CONSTRAINT "subscriptons_userId_fkey" FOREIGN KEY ("userId") REFERENCES "users"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- AddForeignKey
 ALTER TABLE "haircuts" ADD CONSTRAINT "haircuts_user_id_fkey" FOREIGN KEY ("user_id") REFERENCES "users"("id") ON DELETE RESTRICT ON UPDATE CASCADE;

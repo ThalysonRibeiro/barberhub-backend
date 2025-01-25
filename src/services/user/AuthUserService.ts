@@ -15,7 +15,7 @@ class AuthUserService {
         email: email
       },
       include: {
-        subscripitons: true,
+        subscriptons: true,
       }
     })
 
@@ -47,9 +47,9 @@ class AuthUserService {
       email: user?.email,
       endereco: user?.endereco,
       token: token,
-      subscripitons: user.subscripitons ? {
-        id: user?.subscripitons?.id,
-        status: user?.subscripitons?.status
+      subscriptons: user.subscriptons ? {
+        id: user?.subscriptons?.id,
+        status: user?.subscriptons?.status
       } : null
     }
   }
