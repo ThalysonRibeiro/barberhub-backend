@@ -16,11 +16,11 @@ class UpdateHaircutService {
         id: user_id,
       },
       include: {
-        subscriptons: true,
+        subscriptions: true,
       }
     })
 
-    if (user?.subscriptons?.status !== "active") {
+    if (user?.subscriptions?.status !== "active") {
       throw new Error("Not authorized");
     }
 

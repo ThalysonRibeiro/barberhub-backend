@@ -21,16 +21,16 @@ model User {
   password           String
   stripe_customer_id String?
 
-  created_at   DateTime?    @default(now())
-  updated_at   DateTime?    @default(now())
-  subscriptons Subscripton?
-  haircut      Haircut[]
-  service      Service[]
+  created_at    DateTime?     @default(now())
+  updated_at    DateTime?     @default(now())
+  subscriptions Subscription?
+  haircut       Haircut[]
+  service       Service[]
 
   @@map("users")
 }
 
-model Subscripton {
+model Subscription {
   id         String    @id
   status     String
   priceId    String
@@ -39,7 +39,7 @@ model Subscripton {
   userId     String    @unique
   user       User      @relation(fields: [userId], references: [id])
 
-  @@map("subscriptons")
+  @@map("subscriptions")
 }
 
 model Haircut {

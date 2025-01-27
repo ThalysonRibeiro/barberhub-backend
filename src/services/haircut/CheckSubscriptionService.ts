@@ -13,7 +13,7 @@ class CheckSubscriptionService {
         id: user_id,
       },
       select: {
-        subscriptons: {
+        subscriptions: {
           select: {
             id: true,
             status: true,

@@ -12,7 +12,7 @@ class DetailUserService {
         name: true,
         email: true,
         endereco: true,
-        subscriptons: {
+        subscriptions: {
           select: {
             id: true,
             priceId: true,
