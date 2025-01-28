@@ -13,6 +13,7 @@ import { DetailHaircutController } from "./controllers/haircut/DetailHaircutCont
 import { NewScheduleController } from "./controllers/schedule/NewScheduleController";
 import { ListScheduleController } from "./controllers/schedule/ListScheduleController";
 import { FinishScheduleController } from "./controllers/schedule/FinishScheduleController";
+import { SubscribeController } from "./controllers/Subscription/SubscribeController";
 
 
 const router = Router();
@@ -41,5 +42,7 @@ router.post('/schedule', isAuthenticated, new NewScheduleController().handle);
 router.get('/schedule', isAuthenticated, new ListScheduleController().handle);
 router.delete('/schedule', isAuthenticated, new FinishScheduleController().handle);
 
+//subscribe / paagamentos
+router.post('/subscribe', isAuthenticated, new SubscribeController().handle);
 
 export { router };
