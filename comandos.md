@@ -17,3 +17,7 @@ yarn add @types/bcryptjs
 yarn add jsonwebtoken
 yarn add @types/jsonwebtoken -D
 yarn add stripe
+
+<!-- endpointSecret -->
+stripe listen
+stripe listen --forward-to localhost:3333/webhooks
