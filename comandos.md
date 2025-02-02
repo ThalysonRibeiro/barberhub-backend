@@ -21,3 +21,5 @@ yarn add stripe
 <!-- endpointSecret -->
 stripe listen
 stripe listen --forward-to localhost:3333/webhooks
+
+npx prisma studio

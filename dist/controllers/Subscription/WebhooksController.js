@@ -17,7 +17,7 @@ class WebhooksController {
         return __awaiter(this, void 0, void 0, function* () {
             let event = request.body;
             const signature = request.headers['stripe-signature'];
-            let endpointSecret = 'whsec_0a1d0f8c6ecefee3a77c07686276fb21a7f2cdfd385754322099becedfc98f7d';
+            let endpointSecret = process.env.STRIPE_WEBHOOK_SECRET;
             try {
                 event = stripe_1.stripe.webhooks.constructEvent(request.body, signature, endpointSecret);
             }
