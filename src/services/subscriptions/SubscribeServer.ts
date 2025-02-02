@@ -12,7 +12,7 @@ class SubscribeServer {
       {
         apiVersion: '2025-01-27.acacia',
         appInfo: {
-          name: 'barberhub',
+          name: 'barberpro',
           version: '1'
         }
       }
