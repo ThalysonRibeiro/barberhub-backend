@@ -5,7 +5,7 @@ export const stripe = new Stripe(
   {
     apiVersion: '2025-01-27.acacia',
     appInfo: {
-      name: 'barberhub',
+      name: 'barberpro',
       version: '1'
     }
   }
