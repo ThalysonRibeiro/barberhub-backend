@@ -14,6 +14,7 @@ class SubscribeController {
 
     return res.json(subscribe);
   }
+
 }
 
 export { SubscribeController };
