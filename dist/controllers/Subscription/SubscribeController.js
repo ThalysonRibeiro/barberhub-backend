@@ -10,13 +10,13 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SubscribeController = void 0;
-const SubscribeServer_1 = require("../../services/subscriptions/SubscribeServer");
+const SubscribeService_1 = require("../../services/subscriptions/SubscribeService");
 class SubscribeController {
     handle(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const user_id = req.user_id;
-            const subscribeServer = new SubscribeServer_1.SubscribeServer();
-            const subscribe = yield subscribeServer.execute({
+            const subscribeService = new SubscribeService_1.SubscribeService();
+            const subscribe = yield subscribeService.execute({
                 user_id
             });
             return res.json(subscribe);

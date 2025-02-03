@@ -8,7 +8,7 @@ const stripe_1 = __importDefault(require("stripe"));
 exports.stripe = new stripe_1.default(process.env.STRIPE_API_KEY, {
     apiVersion: '2025-01-27.acacia',
     appInfo: {
-        name: 'barberpro',
+        name: 'barberpro-web.vercel.app',
         version: '1'
     }
 });

@@ -5,14 +5,14 @@ interface SubscribeRequest {
   user_id: string;
 }
 
-class SubscribeServer {
+class SubscribeService {
   async execute({ user_id }: SubscribeRequest) {
     const stripe = new Stripe(
       process.env.STRIPE_API_KEY,
       {
         apiVersion: '2025-01-27.acacia',
         appInfo: {
-          name: 'barberpro',
+          name: 'barberpro-web.vercel.app',
           version: '1'
         }
       }
@@ -62,4 +62,4 @@ class SubscribeServer {
   }
 }
 
-export { SubscribeServer };
+export { SubscribeService };

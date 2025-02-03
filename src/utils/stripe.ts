@@ -5,7 +5,7 @@ export const stripe = new Stripe(
   {
     apiVersion: '2025-01-27.acacia',
     appInfo: {
-      name: 'barberpro',
+      name: 'barberpro-web.vercel.app',
       version: '1'
     }
   }

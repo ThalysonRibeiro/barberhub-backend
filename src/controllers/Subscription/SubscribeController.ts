@@ -1,13 +1,14 @@
 import { Request, Response } from "express";
-import { SubscribeServer } from "../../services/subscriptions/SubscribeServer";
+import { SubscribeService } from "../../services/subscriptions/SubscribeService";
+
 
 class SubscribeController {
   async handle(req: Request, res: Response) {
     const user_id = req.user_id;
 
-    const subscribeServer = new SubscribeServer();
+    const subscribeService = new SubscribeService();
 
-    const subscribe = await subscribeServer.execute({
+    const subscribe = await subscribeService.execute({
       user_id
     })
 
