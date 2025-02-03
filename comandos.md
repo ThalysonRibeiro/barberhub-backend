@@ -21,5 +21,6 @@ yarn add stripe
 <!-- endpointSecret -->
 stripe listen
 stripe listen --forward-to localhost:3333/webhooks
+stripe listen --forward-to https://barberpro-backend.vercel.app/api/webhooks/stripe
 
 npx prisma studio
